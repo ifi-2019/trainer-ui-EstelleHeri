@@ -7,14 +7,8 @@
 
     <div class="card-deck">
         {{#trainers}}
-        <div class="col-md-3">
-            <div class="card shadow-sm mb-3">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{name}}
-                    </h4>
-                </div>
+        <a href="/trainers/{{name}}"><h2>{{name}}</h2></a>
 
-            </div>
         </div>
         {{/trainers}}
     </div>
