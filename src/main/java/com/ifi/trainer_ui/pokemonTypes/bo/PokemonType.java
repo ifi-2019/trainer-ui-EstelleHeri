@@ -80,6 +80,6 @@ public class PokemonType implements Comparable {
     @Override
     public int compareTo(Object o) {
         PokemonType pt = (PokemonType) o;
-        return getName().compareTo(((PokemonType) o).getName());
+        return getName().compareTo(pt.getName());
     }
 }
