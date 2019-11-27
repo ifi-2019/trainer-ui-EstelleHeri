@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PokemonType implements Comparable {
 
-    private int id;
+    private Integer id;
     private int baseExperience;
     private int height;
     private String name;
@@ -13,11 +13,11 @@ public class PokemonType implements Comparable {
     private int weight;
     private List<String> types;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -80,6 +80,6 @@ public class PokemonType implements Comparable {
     @Override
     public int compareTo(Object o) {
         PokemonType pt = (PokemonType) o;
-        return getName().compareTo(pt.getName());
+        return getId().compareTo(pt.getId());
     }
 }
