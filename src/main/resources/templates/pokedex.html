@@ -2,6 +2,8 @@
 
     <body>
 
+        {{> layout/navbar}}
+
         <div class="container">
             <h1 class="pt-md-5 pb-md-5">Pokedex</h1>
 
@@ -22,10 +24,11 @@
                             <span class="badge badge-primary">Attack : {{stats.attack}}</span>
                             <span class="badge badge-primary">Defense : {{stats.defense}}</span>
                             <span class="badge badge-primary">HP : {{stats.hp}}</span>
-                            <span class="badge badge-primary">Types : </span>
-                            {{#types}}
-                            <span>{{.}}</span>
-                            {{/types}}
+                            <span class="badge badge-primary">Types :
+                                {{#types}}
+                                <span>{{.}}</span>
+                                {{/types}}
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -1,19 +1,21 @@
 {{> layout/header}}
 
-<body>
+    <body>
 
-<div class="container">
-    <h1 class="pt-md-5 pb-md-5">Trainers</h1>
+        {{> layout/navbar}}
 
-    <div class="card-deck">
-        {{#trainers}}
-        <a href="/trainers/{{name}}"><h2>{{name}}</h2></a>
+        <div class="container">
+            <h1 class="pt-md-5 pb-md-5">Trainers</h1>
+
+            <div class="card-deck">
+                {{#trainers}}
+                <a href="/trainers/{{name}}"><h2>{{name}}</h2></a>
+
+
+                {{/trainers}}
+            </div>
 
         </div>
-        {{/trainers}}
-    </div>
 
-</div>
-
-</body>
+    </body>
 </html>

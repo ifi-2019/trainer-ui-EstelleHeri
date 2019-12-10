@@ -1,19 +1,21 @@
 {{> layout/header}}
 
-<body>
+    <body>
 
-    <div class="container">
-        <h1 class="pt-md-5 pb-md-5">Trainer : {{trainer.name}}</h1>
+        {{> layout/navbar}}
 
-        <div>
-            <h2>Team :</h2>
-            {{#trainer.team}}
-            <span>Id : {{pokemonType}}</span>
-            <span>Level : {{level}}</span>
-            <br>
-            {{/trainer.team}}
+        <div class="container">
+            <h1 class="pt-md-5 pb-md-5">{{trainer.name}}</h1>
+
+            <div>
+                <h2>Team :</h2>
+                {{#trainer.team}}
+                <span>Id : {{pokemonType}}</span>
+                <span>Level : {{level}}</span>
+                <br>
+                {{/trainer.team}}
+            </div>
         </div>
-    </div>
 
-</body>
+    </body>
 </html>
