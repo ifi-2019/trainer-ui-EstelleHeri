@@ -5,13 +5,28 @@
         {{> layout/navbar}}
 
         <div class="container">
+
             <h1 class="pt-md-5 pb-md-5">Trainers</h1>
 
             <div class="card-deck">
                 {{#trainers}}
-                <a href="/trainers/{{name}}"><h2>{{name}}</h2></a>
+                <div class="col-md-3">
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">{{name}}
+                            </h4>
+                        </div>
 
+                        {{#pokemonTypes}}
+                        <img class="card-img-top" src="{{pokemonType.sprites.front_default}}" alt="Pokemon"/>
 
+                        <div class="card-body">
+                            <span class="badge badge-secondary">Level {{level}}</span>
+                        </div>
+                        {{/pokemonTypes}}
+
+                    </div>
+                </div>
                 {{/trainers}}
             </div>
 

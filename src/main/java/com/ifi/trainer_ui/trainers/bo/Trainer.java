@@ -1,5 +1,8 @@
 package com.ifi.trainer_ui.trainers.bo;
 
+import com.ifi.trainer_ui.pokemonTypes.bo.PokemonType;
+import com.ifi.trainer_ui.pokemonTypes.bo.PokemonTypeLevel;
+
 import java.util.List;
 
 public class Trainer implements Comparable {
@@ -9,6 +12,8 @@ public class Trainer implements Comparable {
     private String password;
 
     private List<Pokemon> team;
+
+    private List<PokemonTypeLevel> pokemonTypes;
 
     public Trainer() {
 
@@ -36,6 +41,14 @@ public class Trainer implements Comparable {
 
     public void setTeam(List<Pokemon> team) {
         this.team = team;
+    }
+
+    public List<PokemonTypeLevel> getPokemonTypes() {
+        return this.pokemonTypes;
+    }
+
+    public void setPokemonTypes(List<PokemonTypeLevel> pokemonTypes) {
+        this.pokemonTypes = pokemonTypes;
     }
 
     @Override
