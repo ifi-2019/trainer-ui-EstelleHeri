@@ -30,13 +30,14 @@ public class TrainerController {
         var trainers = trainerService.listTrainers();
 
         for (Trainer t : trainers) {
-                List<PokemonTypeLevel> listPokemon = new ArrayList<>();
-                for (Pokemon p : t.getTeam()) {
-                    var pT = pokemonTypeService.getPokemonType(p.getPokemonType());
-                    var pTL = new PokemonTypeLevel(pT,p.getLevel());
-                    listPokemon.add(pTL);
-                }
-                t.setPokemonTypes(listPokemon);
+
+            List<PokemonTypeLevel> listPokemon = new ArrayList<>();
+            for (Pokemon p : t.getTeam()) {
+                var pT = pokemonTypeService.getPokemonType(p.getPokemonType());
+                var pTL = new PokemonTypeLevel(pT, p.getLevel());
+                listPokemon.add(pTL);
+            }
+            t.setPokemonTypes(listPokemon);
 
         }
         modelAndView.addObject("trainers", trainers);
